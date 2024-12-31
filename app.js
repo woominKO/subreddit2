@@ -20,7 +20,8 @@ app.set('view engine', 'ejs')
 app.set(__dirname, 'views' )
 
 app.get('/r/:subreddit', (req,res)=>{
-    console.log(req)
+    const subreddit = req.params.subreddit
+    res.render('index',{db:db} )
 })
 
 app.listen(3000, console.log("http://localhost:3000"))
